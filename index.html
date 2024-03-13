@@ -4,12 +4,21 @@
 <body>
 <h1>Project work</h1>
 <p>IS428</p>
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'>  
-</script>
-<object class='tableauViz' width='1200' height='1000' style='display:none;' name='viz'>
-<param name='host_url' value='http://tableau.zuar.com/' />
-<param name='site_root' value='' />
-<param name='name' value='Superstore/Product' />
-</object>
+
+<script type="module">
+    import { TableauViz } from "https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.js";  
+    
+    const viz = new TableauViz();
+    
+    viz.src = "https://public.tableau.com/shared/FQCM85P53?:display_count=n&:origin=viz_share_link";
+    viz.toolbar = "hidden";
+    
+    document.getElementById("tableauViz").appendChild(viz);  
+</script>  
+
+<div style="width:800px; height:700px;">
+<div id="tableauViz"></div>
+</div> 
+
 </body>
 </html>
